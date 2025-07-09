@@ -365,17 +365,17 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
   btnText.textContent = 'Sending...';
   btnLoader.classList.remove('hidden');
 
-  const selectedOpenLand = [...form.querySelectorAll('input[name="property_type[]"]:checked')].map(
-    (el) => el.value
-  );
+  const checkboxes = document.querySelectorAll('input[name="property_type[]"]:checked');
+  const selected = Array.from(checkboxes).map((cb) => cb.value);
+  const commaSeparated = selected.join(', ');
 
-  console.log('Selected Open Land:', selectedOpenLand);
+  console.log('Selected Open Land:', commaSeparated);
 
   const formData = {
     name: form.name.value,
     email: form.email.value,
     contact: form.contact.value,
-    requirements: selectedOpenLand.join(', '),
+    requirements: commaSeparated,
     message: form.message.value,
     'g-recaptcha-response': captcha,
   };
