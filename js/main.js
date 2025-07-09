@@ -161,6 +161,29 @@ AOS.init({
         },
       },
     });
+    $('.carousel-testimony1').owlCarousel({
+      autoplay: true,
+      autoHeight: true,
+      center: true,
+      loop: true,
+      items: 1,
+      margin: 30,
+      stagePadding: 0,
+      nav: false,
+      dots: true,
+      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      responsive: {
+        0: {
+          items: 3,
+        },
+        600: {
+          items: 5,
+        },
+        1000: {
+          items: 7,
+        },
+      },
+    });
   };
   carousel();
 

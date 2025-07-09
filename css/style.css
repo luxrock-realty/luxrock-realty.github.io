@@ -12090,7 +12090,7 @@ h5,
 }
 
 .bg-light-form {
-	background: #f8f9fa !important;
+  background: #f8f9fa !important;
 }
 
 .bg-primary {
@@ -13093,7 +13093,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 5em 0;
   position: relative;
 }
 
@@ -14252,54 +14252,67 @@ textarea.form-control {
 }
 
 .hero-wrap {
-		position: relative;
-		width: 100%;
-		height: 100vh;
-		background-size: cover;
-		background-position: center;
-		transition: background-image 1s ease-in-out;
-	}
-  .overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		z-index: 1;
-	}
-  #tagline-wrapper {
-		position: relative;
-		z-index: 2;
-		min-height: 250px;
-	}
-  .slide-item {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		opacity: 0;
-		transition: opacity 1s ease-in-out;
-	}
-  .slide-item.active {
-		display: block;
-		opacity: 1;
-		animation: fadeInUp 1s ease forwards;
-	}
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#tagline-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 250px;
+}
+
+.slide-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-item.active {
+  display: block;
+  opacity: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+
 .tagline {
-		font-size: 48px;
-		font-weight: 700;
-		color: #000000;
-	}
+  font-size: 48px;
+  font-weight: 700;
+  color: #000000;
+}
 
-	.subline {
-		font-size: 22px;
-		color: #000000;
-	}
+.subline {
+  font-size: 22px;
+  color: #000000;
+}
 
-  @media (min-width: 992px) {
-	.services {
-		min-height: 320px;
-	}
+
+@media (min-width: 992px) {
+  .services {
+    min-height: 320px;
+  }
+}
+
+.ftco-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  /* enough to stay above other elements */
 }
