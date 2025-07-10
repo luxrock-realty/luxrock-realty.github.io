@@ -14314,31 +14314,46 @@ textarea.form-control {
   position: sticky;
   top: 0;
   z-index: 1030;
-  /* enough to stay above other elements */
 }
 
-.logo-marquee {
+/* Section background and padding */
+.brand-section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* Marquee container */
+.brand-marquee {
+  width: 100%;
   overflow: hidden;
   position: relative;
-  width: 100%;
 }
 
-.logo-track {
+/* Scrolling track */
+.brand-track {
   display: flex;
+  align-items: center;
+  gap: 60px; /* spacing between logos */
   width: max-content;
-  animation: scrollLeft 15s linear infinite;
-  -webkit-animation: scrollLeft 15s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
-.logo-track img {
-  height: 140px;
-  margin: 0 30px;
-  object-fit: contain;
+/* Logo size */
+.brand-track img {
+  width: 120px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes scrollLeft {
+.brand-track img:hover {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);

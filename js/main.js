@@ -433,4 +433,3 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
       alert('Your message has been sent successfully! Please wait for our response.');
     });
 });
-
