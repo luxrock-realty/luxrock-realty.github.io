@@ -14316,3 +14316,31 @@ textarea.form-control {
   z-index: 1030;
   /* enough to stay above other elements */
 }
+
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 15s linear infinite;
+  -webkit-animation: scrollLeft 15s linear infinite;
+}
+
+.logo-track img {
+  height: 140px;
+  margin: 0 30px;
+  object-fit: contain;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
