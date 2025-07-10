@@ -162,28 +162,27 @@ AOS.init({
       },
     });
     $('.carousel-testimony1').owlCarousel({
-      autoplay: true,
-      autoHeight: true,
-      center: true,
-      loop: true,
-      items: 1,
-      margin: 30,
-      stagePadding: 0,
-      nav: false,
-      dots: true,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-      responsive: {
-        0: {
-          items: 3,
-        },
-        600: {
-          items: 5,
-        },
-        1000: {
-          items: 7,
-        },
-      },
-    });
+  loop: true,
+  margin: 30,
+  autoplay: true,
+  autoplayTimeout: 1,          // no delay
+  autoplaySpeed: 3000,         // smooth slide speed
+  smartSpeed: 3000,            // smooth transition
+  autoplayHoverPause: false,   // don't stop on hover
+  nav: false,
+  dots: false,
+  responsive: {
+    0: {
+      items: 3
+    },
+    600: {
+      items: 5
+    },
+    1000: {
+      items: 7
+    }
+  }
+});
   };
   carousel();
 
@@ -434,3 +433,4 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
       alert('Your message has been sent successfully! Please wait for our response.');
     });
 });
+
