@@ -2406,7 +2406,7 @@ textarea.form-control {
 }
 
 .form-group {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .form-text {
@@ -14359,3 +14359,44 @@ textarea.form-control {
     transform: translateX(-50%);
   }
 }
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: Mobile - 1 column */
+  gap: 0px 7px; /* 0px vertical, 7px horizontal */
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .checkbox-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tablet & above: 3 columns */
+  }
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-item span {
+  margin-left: 8px;
+  color: gray;
+  font-size: 1.1rem;
+}
+
+.recaptcha-wrapper {
+    transform: scale(1);
+    transform-origin: 0 0;
+  }
+
+  @media (max-width: 767px) {
+    .recaptcha-wrapper {
+      transform: scale(0.85); /* 85% size on mobile */
+    }
+  }
