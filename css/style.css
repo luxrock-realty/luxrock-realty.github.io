@@ -11934,7 +11934,8 @@ h5,
   position: inherit;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center !important;
+  background-attachment: fixed;
 }
 
 @media (max-width: 991.98px) {
@@ -12964,7 +12965,7 @@ h5,
   bottom: 0;
   content: '';
   opacity: .2;
-  background: #000000;
+  /* background: #000000; */
 }
 
 @media (max-width: 991.98px) {
@@ -12975,7 +12976,7 @@ h5,
 
 .ftco-intro h2 {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 46px;
   font-weight: 600;
 }
 
@@ -13614,6 +13615,7 @@ textarea.form-control {
 @media (min-width: 992px) {
   .ftco-counter .img {
     margin-top: 80px;
+    margin-bottom: 112px;
   }
 }
 
@@ -14257,7 +14259,7 @@ textarea.form-control {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
 }
 
 .overlay {
@@ -14266,7 +14268,7 @@ textarea.form-control {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
   z-index: 1;
 }
 
@@ -14277,13 +14279,16 @@ textarea.form-control {
 }
 
 .slide-item {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ opacity: 0;
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+
 }
 
 .slide-item.active {
@@ -14333,7 +14338,8 @@ textarea.form-control {
 .brand-track {
   display: flex;
   align-items: center;
-  gap: 60px; /* spacing between logos */
+  gap: 60px;
+  /* spacing between logos */
   width: max-content;
   animation: scroll-left 30s linear infinite;
 }
@@ -14355,6 +14361,7 @@ textarea.form-control {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -14362,14 +14369,17 @@ textarea.form-control {
 
 .checkbox-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default: Mobile - 1 column */
-  gap: 0px 7px; /* 0px vertical, 7px horizontal */
+  grid-template-columns: 1fr;
+  /* Default: Mobile - 1 column */
+  gap: 0px 7px;
+  /* 0px vertical, 7px horizontal */
   margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
   .checkbox-grid {
-    grid-template-columns: repeat(3, 1fr); /* Tablet & above: 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* Tablet & above: 3 columns */
   }
 }
 
@@ -14391,12 +14401,13 @@ textarea.form-control {
 }
 
 .recaptcha-wrapper {
-    transform: scale(1);
-    transform-origin: 0 0;
-  }
+  transform: scale(1);
+  transform-origin: 0 0;
+}
 
-  @media (max-width: 767px) {
-    .recaptcha-wrapper {
-      transform: scale(0.85); /* 85% size on mobile */
-    }
+@media (max-width: 767px) {
+  .recaptcha-wrapper {
+    transform: scale(0.85);
+    /* 85% size on mobile */
   }
+}
