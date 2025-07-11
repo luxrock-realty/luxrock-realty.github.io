@@ -96,7 +96,7 @@ h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 abbr[title],
@@ -11617,12 +11617,6 @@ h5,
   padding: 0;
 }
 
-.ftco-navbar-light .navbar-brand {
-  color: #fff;
-  padding-top: .7rem;
-  padding-bottom: .7rem;
-}
-
 .ftco-navbar-light .navbar-brand:hover,
 .ftco-navbar-light .navbar-brand:focus {
   color: #000000 !important;
@@ -11636,7 +11630,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light .navbar-nav {
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     margin-right: 0;
   }
 }
@@ -11934,13 +11928,13 @@ h5,
   position: inherit;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center !important;
+  background-position: top center !important;
   background-attachment: fixed;
 }
 
 @media (max-width: 991.98px) {
   .hero-wrap {
-    background-position: center center !important;
+    background-position: top top !important;
   }
 }
 
@@ -13094,7 +13088,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 5em 0;
+  padding: 4em 0;
   position: relative;
 }
 
@@ -14370,16 +14364,13 @@ textarea.form-control {
 .checkbox-grid {
   display: grid;
   grid-template-columns: 1fr;
-  /* Default: Mobile - 1 column */
   gap: 0px 7px;
-  /* 0px vertical, 7px horizontal */
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 768px) {
   .checkbox-grid {
     grid-template-columns: repeat(3, 1fr);
-    /* Tablet & above: 3 columns */
   }
 }
 
