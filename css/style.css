@@ -73,6 +73,12 @@ body {
   background-color: #fff;
 }
 
+@media (max-width: 767px) {
+  body {
+    zoom: 90%;
+  }
+}
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
