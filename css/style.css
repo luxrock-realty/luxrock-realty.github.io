@@ -73,10 +73,20 @@ body {
   background-color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1540px) {
   body {
-    zoom: 90%;
+    zoom: 87%;
   }
+  .hero-wrap {
+  width: 100%;
+  height: 100%;
+  position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center !important;
+  background-attachment: fixed;
+}
+
 }
 
 [tabindex="-1"]:focus {
