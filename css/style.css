@@ -83,7 +83,7 @@ body {
   position: inherit;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center !important;
+  background-position: center center !important;
   background-attachment: fixed;
 }
 
