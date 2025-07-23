@@ -51,22 +51,20 @@ AOS.init({
   burgerMenu();
 
   var onePageClick = function () {
-    $(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-      event.preventDefault();
+  $(document).on('click', '#ftco-nav a[href^="#"], .ftco-footer-widget a[href^="#"]', function (event) {
+    event.preventDefault();
 
-      var href = $.attr(this, 'href');
-
+    var target = $($.attr(this, 'href'));
+    if (target.length) {
       $('html, body').animate(
         {
-          scrollTop: $($.attr(this, 'href')).offset().top - 70,
+          scrollTop: target.offset().top - 70,
         },
-        500,
-        function () {
-          // window.location.hash = href;
-        }
+        500
       );
-    });
-  };
+    }
+  });
+};
 
   onePageClick();
 
@@ -118,7 +116,7 @@ AOS.init({
       },
     });
     $('.carousel-agent').owlCarousel({
-      autoplay: true,
+      autoplay: false, // Set to false to disable autoplay
       center: false,
       loop: true,
       items: 1,
@@ -134,7 +132,7 @@ AOS.init({
           items: 2,
         },
         1000: {
-          items: 3,
+          items: 2,
         },
       },
     });
