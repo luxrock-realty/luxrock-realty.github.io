@@ -12690,50 +12690,27 @@ h5,
   background: #bb9b49;
 }
 
-.carousel-agent .item {
-  height: 100%;
-}
-
 .agent {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  background: #fff;
-  border-radius: 8px;
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+  margin-bottom: 3em;
 }
 
 .agent .img {
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  max-height: 39rem;
+  display: flex;
   overflow: hidden;
-  border-radius: 8px;
-}
-
-.agent .img img {
-  width: 100%;
-  height: 50rem;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.agent .desc {
-  padding-top: 15px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .agent .img img {
-    height: 240px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .agent .img img {
-    height: 280px;
-  }
+  z-index: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .agent .img div {
@@ -12799,6 +12776,9 @@ h5,
 
 .agent .desc {
   position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .agent .desc h3 {
@@ -12834,6 +12814,9 @@ h5,
 
 .agent .desc .details {
   color: #000000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .agent:hover .img:after,

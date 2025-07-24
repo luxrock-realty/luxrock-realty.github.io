@@ -118,7 +118,7 @@ AOS.init({
     $('.carousel-agent').owlCarousel({
       autoplay: false, // Set to false to disable autoplay
       center: false,
-      loop: true,
+      loop: false,
       items: 1,
       margin: 30,
       stagePadding: 0,
