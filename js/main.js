@@ -116,9 +116,9 @@ AOS.init({
       },
     });
     $('.carousel-agent').owlCarousel({
-      autoplay: false, // Set to false to disable autoplay
-      center: false,
-      loop: false,
+      autoplay: true, // Set to false to disable autoplay
+      center: true,
+      loop: true,
       items: 1,
       margin: 30,
       stagePadding: 0,
@@ -132,7 +132,7 @@ AOS.init({
           items: 2,
         },
         1000: {
-          items: 2,
+          items: 3,
         },
       },
     });
