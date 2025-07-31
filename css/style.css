@@ -14405,8 +14405,23 @@ textarea.form-control {
 }
 
 .checkbox-item input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
   width: 18px;
   height: 18px;
+  background-color: transparent;
+  border: 2px solid #bb9b49;
+  border-radius: 4px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 14px;
+  transition: all 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background-color: #bb9b49;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 20 20' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.629 13.518L3.818 9.707l-1.414 1.414 5.225 5.225L18.182 5.793 16.768 4.379 7.629 13.518z'/%3E%3C/svg%3E");
 }
 
 .checkbox-item span {
