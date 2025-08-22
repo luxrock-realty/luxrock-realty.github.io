@@ -1,10 +1,10 @@
 AOS.init({
   duration: 800,
-  easing: 'slide',
+  easing: "slide",
 });
 
 (function ($) {
-  'use strict';
+  "use strict";
 
   $(window).stellar({
     responsive: true,
@@ -12,13 +12,13 @@ AOS.init({
     parallaxElements: true,
     horizontalScrolling: false,
     hideDistantElements: false,
-    scrollProperty: 'scroll',
+    scrollProperty: "scroll",
   });
 
   var fullHeight = function () {
-    $('.js-fullheight').css('height', $(window).height());
+    $(".js-fullheight").css("height", $(window).height());
     $(window).resize(function () {
-      $('.js-fullheight').css('height', $(window).height());
+      $(".js-fullheight").css("height", $(window).height());
     });
   };
   fullHeight();
@@ -26,8 +26,8 @@ AOS.init({
   // loader
   var loader = function () {
     setTimeout(function () {
-      if ($('#ftco-loader').length > 0) {
-        $('#ftco-loader').removeClass('show');
+      if ($("#ftco-loader").length > 0) {
+        $("#ftco-loader").removeClass("show");
       }
     }, 1);
   };
@@ -38,43 +38,47 @@ AOS.init({
 
   // Burger Menu
   var burgerMenu = function () {
-    $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
+    $("body").on("click", ".js-fh5co-nav-toggle", function (event) {
       event.preventDefault();
 
-      if ($('#ftco-nav').is(':visible')) {
-        $(this).removeClass('active');
+      if ($("#ftco-nav").is(":visible")) {
+        $(this).removeClass("active");
       } else {
-        $(this).addClass('active');
+        $(this).addClass("active");
       }
     });
   };
   burgerMenu();
 
   var onePageClick = function () {
-  $(document).on('click', '#ftco-nav a[href^="#"], .ftco-footer-widget a[href^="#"]', function (event) {
-    event.preventDefault();
+    $(document).on(
+      "click",
+      '#ftco-nav a[href^="#"], .ftco-footer-widget a[href^="#"]',
+      function (event) {
+        event.preventDefault();
 
-    var target = $($.attr(this, 'href'));
-    if (target.length) {
-      $('html, body').animate(
-        {
-          scrollTop: target.offset().top - 70,
-        },
-        500
-      );
-    }
-  });
-};
+        var target = $($.attr(this, "href"));
+        if (target.length) {
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - 70,
+            },
+            500
+          );
+        }
+      }
+    );
+  };
 
   onePageClick();
 
   var carousel = function () {
-    $('.home-slider').owlCarousel({
+    $(".home-slider").owlCarousel({
       loop: true,
       autoplay: true,
       margin: 0,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
       nav: false,
       autoplayHoverPause: false,
       items: 1,
@@ -94,7 +98,7 @@ AOS.init({
         },
       },
     });
-    $('.carousel-properties').owlCarousel({
+    $(".carousel-properties").owlCarousel({
       autoplay: true,
       center: false,
       loop: true,
@@ -102,10 +106,15 @@ AOS.init({
       margin: 30,
       stagePadding: 0,
       nav: false,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      navText: [
+        '<span class="ion-ios-arrow-back">',
+        '<span class="ion-ios-arrow-forward">',
+      ],
       responsive: {
         0: {
           items: 1,
+          touchDrag: false,
+          mouseDrag: false,
         },
         600: {
           items: 2,
@@ -115,7 +124,7 @@ AOS.init({
         },
       },
     });
-    $('.carousel-agent').owlCarousel({
+    $(".carousel-agent").owlCarousel({
       autoplay: true, // Set to false to disable autoplay
       center: true,
       loop: true,
@@ -123,10 +132,15 @@ AOS.init({
       margin: 30,
       stagePadding: 0,
       nav: false,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      navText: [
+        '<span class="ion-ios-arrow-back">',
+        '<span class="ion-ios-arrow-forward">',
+      ],
       responsive: {
         0: {
           items: 1,
+          touchDrag: false,
+          mouseDrag: false
         },
         600: {
           items: 2,
@@ -136,7 +150,7 @@ AOS.init({
         },
       },
     });
-    $('.carousel-testimony').owlCarousel({
+    $(".carousel-testimony").owlCarousel({
       autoplay: true,
       autoHeight: true,
       center: true,
@@ -146,10 +160,15 @@ AOS.init({
       stagePadding: 0,
       nav: false,
       dots: true,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      navText: [
+        '<span class="ion-ios-arrow-back">',
+        '<span class="ion-ios-arrow-forward">',
+      ],
       responsive: {
         0: {
           items: 1,
+          touchDrag: false,
+          mouseDrag: false
         },
         600: {
           items: 2,
@@ -159,55 +178,57 @@ AOS.init({
         },
       },
     });
-    $('.carousel-testimony1').owlCarousel({
-  loop: true,
-  margin: 30,
-  autoplay: true,
-  autoplayTimeout: 1,          // no delay
-  autoplaySpeed: 3000,         // smooth slide speed
-  smartSpeed: 3000,            // smooth transition
-  autoplayHoverPause: false,   // don't stop on hover
-  nav: false,
-  dots: false,
-  responsive: {
-    0: {
-      items: 3
-    },
-    600: {
-      items: 5
-    },
-    1000: {
-      items: 7
-    }
-  }
-});
+    $(".carousel-testimony1").owlCarousel({
+      loop: true,
+      margin: 30,
+      autoplay: true,
+      autoplayTimeout: 1, // no delay
+      autoplaySpeed: 3000, // smooth slide speed
+      smartSpeed: 3000, // smooth transition
+      autoplayHoverPause: false, // don't stop on hover
+      nav: false,
+      dots: false,
+      responsive: {
+        0: {
+          items: 3,
+          touchDrag: false,
+          mouseDrag: false,
+        },
+        600: {
+          items: 5,
+        },
+        1000: {
+          items: 7,
+        },
+      },
+    });
   };
   carousel();
 
-  $('nav .dropdown').hover(
+  $("nav .dropdown").hover(
     function () {
       var $this = $(this);
       // 	 timer;
       // clearTimeout(timer);
-      $this.addClass('show');
-      $this.find('> a').attr('aria-expanded', true);
+      $this.addClass("show");
+      $this.find("> a").attr("aria-expanded", true);
       // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
-      $this.find('.dropdown-menu').addClass('show');
+      $this.find(".dropdown-menu").addClass("show");
     },
     function () {
       var $this = $(this);
       // timer;
       // timer = setTimeout(function(){
-      $this.removeClass('show');
-      $this.find('> a').attr('aria-expanded', false);
+      $this.removeClass("show");
+      $this.find("> a").attr("aria-expanded", false);
       // $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
-      $this.find('.dropdown-menu').removeClass('show');
+      $this.find(".dropdown-menu").removeClass("show");
       // }, 100);
     }
   );
 
-  $('#dropdown04').on('show.bs.dropdown', function () {
-    console.log('show');
+  $("#dropdown04").on("show.bs.dropdown", function () {
+    console.log("show");
   });
 
   // scroll
@@ -215,35 +236,35 @@ AOS.init({
     $(window).scroll(function () {
       var $w = $(this),
         st = $w.scrollTop(),
-        navbar = $('.ftco_navbar'),
-        sd = $('.js-scroll-wrap');
+        navbar = $(".ftco_navbar"),
+        sd = $(".js-scroll-wrap");
 
       if (st > 150) {
-        if (!navbar.hasClass('scrolled')) {
-          navbar.addClass('scrolled');
+        if (!navbar.hasClass("scrolled")) {
+          navbar.addClass("scrolled");
         }
       }
       if (st < 150) {
-        if (navbar.hasClass('scrolled')) {
-          navbar.removeClass('scrolled sleep');
+        if (navbar.hasClass("scrolled")) {
+          navbar.removeClass("scrolled sleep");
         }
       }
       if (st > 350) {
-        if (!navbar.hasClass('awake')) {
-          navbar.addClass('awake');
+        if (!navbar.hasClass("awake")) {
+          navbar.addClass("awake");
         }
 
         if (sd.length > 0) {
-          sd.addClass('sleep');
+          sd.addClass("sleep");
         }
       }
       if (st < 350) {
-        if (navbar.hasClass('awake')) {
-          navbar.removeClass('awake');
-          navbar.addClass('sleep');
+        if (navbar.hasClass("awake")) {
+          navbar.removeClass("awake");
+          navbar.addClass("sleep");
         }
         if (sd.length > 0) {
-          sd.removeClass('sleep');
+          sd.removeClass("sleep");
         }
       }
     });
@@ -251,13 +272,17 @@ AOS.init({
   scrollWindow();
 
   var counter = function () {
-    $('#section-counter, .hero-wrap, .ftco-counter').waypoint(
+    $("#section-counter, .hero-wrap, .ftco-counter").waypoint(
       function (direction) {
-        if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-          var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',');
-          $('.number').each(function () {
+        if (
+          direction === "down" &&
+          !$(this.element).hasClass("ftco-animated")
+        ) {
+          var comma_separator_number_step =
+            $.animateNumber.numberStepFactories.separator(",");
+          $(".number").each(function () {
             var $this = $(this),
-              num = $this.data('number');
+              num = $this.data("number");
             console.log(num);
             $this.animateNumber(
               {
@@ -269,55 +294,58 @@ AOS.init({
           });
         }
       },
-      { offset: '95%' }
+      { offset: "95%" }
     );
   };
   counter();
 
   var contentWayPoint = function () {
     var i = 0;
-    $('.ftco-animate').waypoint(
+    $(".ftco-animate").waypoint(
       function (direction) {
-        if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+        if (
+          direction === "down" &&
+          !$(this.element).hasClass("ftco-animated")
+        ) {
           i++;
 
-          $(this.element).addClass('item-animate');
+          $(this.element).addClass("item-animate");
           setTimeout(function () {
-            $('body .ftco-animate.item-animate').each(function (k) {
+            $("body .ftco-animate.item-animate").each(function (k) {
               var el = $(this);
               setTimeout(
                 function () {
-                  var effect = el.data('animate-effect');
-                  if (effect === 'fadeIn') {
-                    el.addClass('fadeIn ftco-animated');
-                  } else if (effect === 'fadeInLeft') {
-                    el.addClass('fadeInLeft ftco-animated');
-                  } else if (effect === 'fadeInRight') {
-                    el.addClass('fadeInRight ftco-animated');
+                  var effect = el.data("animate-effect");
+                  if (effect === "fadeIn") {
+                    el.addClass("fadeIn ftco-animated");
+                  } else if (effect === "fadeInLeft") {
+                    el.addClass("fadeInLeft ftco-animated");
+                  } else if (effect === "fadeInRight") {
+                    el.addClass("fadeInRight ftco-animated");
                   } else {
-                    el.addClass('fadeInUp ftco-animated');
+                    el.addClass("fadeInUp ftco-animated");
                   }
-                  el.removeClass('item-animate');
+                  el.removeClass("item-animate");
                 },
                 k * 50,
-                'easeInOutExpo'
+                "easeInOutExpo"
               );
             });
           }, 100);
         }
       },
-      { offset: '95%' }
+      { offset: "95%" }
     );
   };
   contentWayPoint();
 
   // magnific popup
-  $('.image-popup').magnificPopup({
-    type: 'image',
+  $(".image-popup").magnificPopup({
+    type: "image",
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: "mfp-no-margins mfp-with-zoom", // class to remove default margin from left and right side
     gallery: {
       enabled: true,
       navigateByImgClick: true,
@@ -332,10 +360,10 @@ AOS.init({
     },
   });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+  $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
     disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
+    type: "iframe",
+    mainClass: "mfp-fade",
     removalDelay: 160,
     preloader: false,
 
@@ -344,52 +372,54 @@ AOS.init({
 })(jQuery);
 
 let currentSlide = 0;
-const slides = document.querySelectorAll('#tagline-wrapper .slide-item');
-const hero = document.querySelector('.hero-wrap');
+const slides = document.querySelectorAll("#tagline-wrapper .slide-item");
+const hero = document.querySelector(".hero-wrap");
 
 function showNextSlide() {
-  slides[currentSlide].classList.remove('active');
+  slides[currentSlide].classList.remove("active");
   currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
+  slides[currentSlide].classList.add("active");
 
   // Change background image
-  const newBg = slides[currentSlide].getAttribute('data-bg');
+  const newBg = slides[currentSlide].getAttribute("data-bg");
   hero.style.backgroundImage = `url('${newBg}')`;
 }
 
 // Init
-const firstBg = slides[0].getAttribute('data-bg');
+const firstBg = slides[0].getAttribute("data-bg");
 hero.style.backgroundImage = `url('${firstBg}')`;
-slides[0].classList.add('active');
+slides[0].classList.add("active");
 
 // Auto rotate
 setInterval(showNextSlide, 3000);
 
-document.getElementById('myForm').addEventListener('submit', function (e) {
+document.getElementById("myForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const form = this;
   const captcha = grecaptcha.getResponse();
-  const btn = document.getElementById('submitBtn');
-  const btnText = document.getElementById('btnText');
-  const btnLoader = document.getElementById('btnLoader');
-  const successMessage = document.getElementById('successMessage');
+  const btn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const btnLoader = document.getElementById("btnLoader");
+  const successMessage = document.getElementById("successMessage");
 
   if (!captcha) {
-    alert('Please complete the CAPTCHA');
+    alert("Please complete the CAPTCHA");
     return;
   }
 
   // Show loader and disable button
   btn.disabled = true;
-  btnText.textContent = 'Sending...';
-  btnLoader.classList.remove('hidden');
+  btnText.textContent = "Sending...";
+  btnLoader.classList.remove("hidden");
 
-  const checkboxes = document.querySelectorAll('input[name="property_type[]"]:checked');
+  const checkboxes = document.querySelectorAll(
+    'input[name="property_type[]"]:checked'
+  );
   const selected = Array.from(checkboxes).map((cb) => cb.value);
-  const commaSeparated = selected.join(', ');
+  const commaSeparated = selected.join(", ");
 
-  console.log('Selected Open Land:', commaSeparated);
+  console.log("Selected Open Land:", commaSeparated);
 
   const formData = {
     name: form.name.value,
@@ -397,37 +427,39 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
     contact: form.contact.value,
     requirements: commaSeparated,
     message: form.message.value,
-    'g-recaptcha-response': captcha,
+    "g-recaptcha-response": captcha,
   };
 
   fetch(
-    'https://script.google.com/macros/s/AKfycbw5A_s3YhRxMN4vh4g5JrFCzZIHyUhbPRpOZu3dvnjzLhS4z_rfWTE4VLPuR_UeD3VEMg/exec',
+    "https://script.google.com/macros/s/AKfycbw5A_s3YhRxMN4vh4g5JrFCzZIHyUhbPRpOZu3dvnjzLhS4z_rfWTE4VLPuR_UeD3VEMg/exec",
     {
-      method: 'POST',
-      mode: 'no-cors',
+      method: "POST",
+      mode: "no-cors",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     }
   )
     .then(() => {
       btn.disabled = false;
-      btnText.textContent = 'Send Message';
-      btnLoader.classList.add('hidden');
+      btnText.textContent = "Send Message";
+      btnLoader.classList.add("hidden");
 
       form.reset();
       grecaptcha.reset();
 
-      successMessage.classList.remove('hidden');
+      successMessage.classList.remove("hidden");
       setTimeout(() => {
-        successMessage.classList.add('hidden');
+        successMessage.classList.add("hidden");
       }, 5000);
     })
     .catch(() => {
       btn.disabled = false;
-      btnText.textContent = 'Send Message';
-      btnLoader.classList.add('hidden');
-      alert('Your message has been sent successfully! Please wait for our response.');
+      btnText.textContent = "Send Message";
+      btnLoader.classList.add("hidden");
+      alert(
+        "Your message has been sent successfully! Please wait for our response."
+      );
     });
 });
