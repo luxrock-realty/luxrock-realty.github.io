@@ -113,8 +113,8 @@ AOS.init({
       responsive: {
         0: {
           items: 1,
-          touchDrag: false,
-          mouseDrag: false,
+          touchDrag: true,
+          mouseDrag: true,
         },
         600: {
           items: 2,
@@ -139,8 +139,8 @@ AOS.init({
       responsive: {
         0: {
           items: 1,
-          touchDrag: false,
-          mouseDrag: false
+          touchDrag: true,
+          mouseDrag: true,
         },
         600: {
           items: 2,
@@ -167,8 +167,8 @@ AOS.init({
       responsive: {
         0: {
           items: 1,
-          touchDrag: false,
-          mouseDrag: false
+          touchDrag: true,
+          mouseDrag: true
         },
         600: {
           items: 2,
@@ -191,8 +191,8 @@ AOS.init({
       responsive: {
         0: {
           items: 3,
-          touchDrag: false,
-          mouseDrag: false,
+          touchDrag: true,
+          mouseDrag: true,
         },
         600: {
           items: 5,
