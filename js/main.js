@@ -114,7 +114,7 @@ AOS.init({
         0: {
           items: 1,
           touchDrag: true,
-          mouseDrag: true,
+          mouseDrag: false,
         },
         600: {
           items: 2,
@@ -140,7 +140,7 @@ AOS.init({
         0: {
           items: 1,
           touchDrag: true,
-          mouseDrag: true,
+          mouseDrag: false,
         },
         600: {
           items: 2,
@@ -168,7 +168,7 @@ AOS.init({
         0: {
           items: 1,
           touchDrag: true,
-          mouseDrag: true
+          mouseDrag: false,
         },
         600: {
           items: 2,
@@ -192,7 +192,7 @@ AOS.init({
         0: {
           items: 3,
           touchDrag: true,
-          mouseDrag: true,
+          mouseDrag: false,
         },
         600: {
           items: 5,
